@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const MAX_CACHE_SIZE = process.env.MAX_CACHE_SIZE || 10;
+const MAX_CACHE_SIZE = process.env.MAX_CACHE_SIZE || 2;
 const cache = new Map();
 
 const checkCacheSize = (req, res, next) => {
