@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 const MAX_CACHE_SIZE = process.env.MAX_CACHE_SIZE || 10;
